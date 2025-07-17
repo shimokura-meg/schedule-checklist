@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイチェックリスト</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196F3">
+</head>
+<body>
+    <header>
+        <h1>マイチェックリスト</h1>
+    </header>
+    <main>
+        <section id="event-list-section">
+            <h2>予定一覧</h2>
+            <ul id="event-list">
+                </ul>
+            <div class="add-container">
+                <input type="text" id="new-event-name" placeholder="新しい予定名">
+                <input type="date" id="new-event-date">
+                <button id="add-event-button">追加</button>
+            </div>
+        </section>
+
+        <section id="item-list-section" class="hidden">
+            <h2 id="current-event-title"></h2>
+            <ul id="item-list">
+                </ul>
+            <div class="add-container">
+                <input type="text" id="new-item-name" placeholder="新しい持ち物名">
+                <button id="add-item-button">追加</button>
+            </div>
+            <button id="back-to-events">予定一覧に戻る</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
