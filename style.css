@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.4em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li.event-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+li.event-item:hover {
+    background-color: #eef;
+}
+
+.event-info {
+    flex-grow: 1;
+}
+
+.event-info .date {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 4px;
+}
+
+.item-name {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1976D2;
+}
+
+.add-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.delete-button {
+    background-color: #f44336;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+#back-to-events {
+    margin-top: 20px;
+    background-color: #607D8B;
+}
+
+#back-to-events:hover {
+    background-color: #455A64;
+}
