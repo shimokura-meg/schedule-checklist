@@ -15,24 +15,29 @@
     <main>
         <section id="event-list-section">
             <h2>予定一覧</h2>
-            <ul id="event-list">
-                </ul>
-            <div class="add-container">
+            <div class="add-container new-event-form">
                 <input type="text" id="new-event-name" placeholder="新しい予定名">
                 <input type="date" id="new-event-date">
-                <button id="add-event-button">追加</button>
+                
+                <div class="recurrence-options">
+                    <label><input type="radio" name="recurrence-type" value="none" checked> 単発</label>
+                    <label><input type="radio" name="recurrence-type" value="daily"> 毎日</label>
+                    <label><input type="radio" name="recurrence-type" value="weekly"> 毎週</label>
+                    <div id="weekly-days" class="hidden">
+                        <label><input type="checkbox" name="weekly-day" value="MO">月</label>
+                        <label><input type="checkbox" name="weekly-day" value="TU">火</label>
+                        <label><input type="checkbox" name="weekly-day" value="WE">水</label>
+                        <label><input type="checkbox" name="weekly-day" value="TH">木</label>
+                        <label><input type="checkbox" name="weekly-day" value="FR">金</label>
+                        <label><input type="checkbox" name="weekly-day" value="SA">土</label>
+                        <label><input type="checkbox" name="weekly-day" value="SU">日</label>
+                    </div>
+                </div>
+                <button id="add-event-button">予定を追加</button>
             </div>
-        </section>
-
-        <section id="item-list-section" class="hidden">
-            <h2 id="current-event-title"></h2>
-            <ul id="item-list">
+            
+            <ul id="event-list">
                 </ul>
-            <div class="add-container">
-                <input type="text" id="new-item-name" placeholder="新しい持ち物名">
-                <button id="add-item-button">追加</button>
-            </div>
-            <button id="back-to-events">予定一覧に戻る</button>
         </section>
     </main>
 

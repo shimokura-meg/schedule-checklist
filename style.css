@@ -45,43 +45,59 @@ ul {
     margin: 0 0 20px 0;
 }
 
-li {
+/* 各予定のコンテナ */
+li.event-item-container {
     background-color: #f9f9f9;
-    padding: 12px 15px;
-    margin-bottom: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.event-title-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer; /* 編集可能を示す */
+    flex-grow: 1;
+}
+
+.event-date-display {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+    cursor: pointer; /* 編集可能を示す */
+}
+
+.item-list-sub {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.item-list-sub li {
+    background-color: #fff;
+    padding: 10px 12px;
+    margin-bottom: 5px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
-li:last-child {
-    margin-bottom: 0;
-}
-
-li.event-item {
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-li.event-item:hover {
-    background-color: #eef;
-}
-
-.event-info {
-    flex-grow: 1;
-}
-
-.event-info .date {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 4px;
-}
-
-.item-name {
+.item-name-display {
     flex-grow: 1;
     margin-left: 10px;
+    cursor: pointer; /* 編集可能を示す */
 }
 
 input[type="text"], input[type="date"] {
@@ -120,10 +136,6 @@ button:hover {
     margin-top: 20px;
 }
 
-.hidden {
-    display: none;
-}
-
 .delete-button {
     background-color: #f44336;
     margin-left: 10px;
@@ -135,11 +147,80 @@ button:hover {
     background-color: #d32f2f;
 }
 
-#back-to-events {
-    margin-top: 20px;
-    background-color: #607D8B;
+.edit-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+    width: calc(100% - 20px); /* 親要素に合わせる */
 }
 
-#back-to-events:hover {
-    background-color: #455A64;
+/* 日付編集用のinputは幅を調整 */
+input.edit-date-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+    width: auto; /* 自動調整 */
+}
+
+/* 新しい予定追加フォームのスタイル */
+.new-event-form {
+    flex-direction: column; /* 縦に並べる */
+    gap: 10px; /* 要素間のスペース */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.new-event-form input[type="text"],
+.new-event-form input[type="date"] {
+    width: auto; /* flex-growを適用 */
+    margin-right: 0; /* flex-direction: column; なので不要 */
+}
+
+.recurrence-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eef;
+    border-radius: 5px;
+}
+
+.recurrence-options label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.recurrence-options input[type="radio"],
+.recurrence-options input[type="checkbox"] {
+    margin-right: 5px;
+    width: auto;
+    height: auto;
+}
+
+#weekly-days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+/* 日付ごとのグループヘッダー */
+.date-group-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00796B; /* Teal color for date headers */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00796B;
+}
+
+.hidden {
+    display: none;
 }
